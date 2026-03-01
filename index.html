@@ -6,40 +6,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f4f4f4;
-        }
+        .top-bar {
+    background: #000;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
 
-        header {
-            background: #111;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
+.hero {
+    position: relative;
+    background: linear-gradient(135deg, #007BFF, #00c6ff);
+    text-align: center;
+    padding: 100px 20px;
+    overflow: hidden;
+}
 
-        header h1 {
-            margin: 0;
-        }
+.hero-logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 450px;
+    opacity: 0.15; /* Transparent Effect */
+}
 
-        .hero {
-            background: linear-gradient(135deg, #007BFF, #00c6ff);
-            color: white;
-            text-align: center;
-            padding: 60px 20px;
-        }
+.hero-content {
+    position: relative;
+    z-index: 2;
+    color: white;
+}
 
-        .btn {
-            display: inline-block;
-            margin: 10px;
-            padding: 12px 25px;
-            background: white;
-            color: #007BFF;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-        }
+.btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 25px;
+    background: white;
+    color: #007BFF;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
 
         section {
             padding: 40px 20px;
@@ -79,18 +85,20 @@
 
 <body>
 
-<header>
+<header class="top-bar">
     <h1>Umbrella Services</h1>
     <p>All India Event & Hourly Manpower Provider</p>
 </header>
 
-<div class="hero">
-    <h2>Professional Event & Manpower Solutions</h2>
-    <p>Available Across India – Delhi, Mumbai, Jaipur & More</p>
-    <a href="tel:7985691940" class="btn">📞 Call Now</a>
-</div>
+<section class="hero">
+    <img src="logo.png" class="hero-logo" alt="Umbrella Services Logo">
 
-<section>
+    <div class="hero-content">
+        <h2>Professional Event & Manpower Solutions</h2>
+        <p>Available Across Lucknow</p>
+        <a href="tel:7985691940" class="btn">📞 Call Now</a>
+    </div>
+</section>
     <h2>Event Manpower Services (Priority)</h2>
     <div class="services">
         <div class="card">
