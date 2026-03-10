@@ -9,20 +9,12 @@
 
 <style>
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial, sans-serif;
-}
-
 body{
-background:#020617;
+margin:0;
+font-family:Arial;
+background:#0f172a;
 color:white;
-overflow-x:hidden;
 }
-
-/* HEADER */
 
 header{
 display:flex;
@@ -31,84 +23,64 @@ align-items:center;
 padding:20px;
 font-size:30px;
 font-weight:bold;
-color:#38bdf8;
 }
-
-/* HERO */
 
 .hero{
-height:90vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
 text-align:center;
-padding:20px;
+padding:40px 20px;
 }
-
-/* LOGO */
 
 .hero img{
-width:420px;
+width:300px;
 max-width:90%;
-margin-bottom:20px;
-animation:float 6s ease-in-out infinite;
-}
-
-/* FLOAT ANIMATION */
-
-@keyframes float{
-
-0%{transform:translateY(0px)}
-50%{transform:translateY(-15px)}
-100%{transform:translateY(0px)}
-
 }
 
 .hero h1{
-font-size:44px;
-margin-bottom:10px;
+font-size:42px;
+margin-top:20px;
 }
 
 .hero p{
-font-size:22px;
-color:#cbd5f5;
-}
-
-.price{
-margin-top:15px;
-font-size:26px;
-color:#22c55e;
-font-weight:bold;
+color:#94a3b8;
+font-size:20px;
 }
 
 /* SERVICES */
 
 .services{
-padding:80px 10%;
+padding:40px 20px;
 text-align:center;
 }
 
-.services h2{
-font-size:34px;
-margin-bottom:40px;
-}
-
 .cards{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:30px;
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:25px;
 }
 
 .card{
 background:#1e293b;
-padding:30px;
-border-radius:10px;
+padding:25px;
+border-radius:12px;
+width:260px;
+cursor:pointer;
 transition:0.3s;
 }
 
 .card:hover{
-transform:translateY(-10px);
+transform:scale(1.05);
+}
+
+/* DETAILS BOX */
+
+.details{
+display:none;
+background:#111827;
+margin-top:15px;
+padding:15px;
+border-radius:8px;
+font-size:14px;
 }
 
 /* WHATSAPP BUTTON */
@@ -118,18 +90,17 @@ position:fixed;
 bottom:20px;
 right:20px;
 background:#25D366;
+padding:14px 18px;
+border-radius:30px;
 color:white;
-padding:15px 22px;
-border-radius:50px;
-font-weight:bold;
 text-decoration:none;
-box-shadow:0 0 10px rgba(0,0,0,0.5);
+font-weight:bold;
 }
 
 footer{
 text-align:center;
-padding:20px;
-background:#020617;
+padding:25px;
+color:#94a3b8;
 }
 
 </style>
@@ -144,13 +115,11 @@ Umbrella Services
 
 <section class="hero">
 
-<img src="logo.png">
+<img src="logo.jpg">
 
 <h1>Umbrella Services</h1>
 
 <p>Across Lucknow</p>
-
-<div class="price">Starting ₹150</div>
 
 </section>
 
@@ -160,19 +129,41 @@ Umbrella Services
 
 <div class="cards">
 
-<div class="card">
-<h3>Delivery Staff</h3>
-<p>Delivery boys available across Lucknow.</p>
+<div class="card" onclick="toggle('d1')">
+
+<h3>Delivery Boys</h3>
+
+<div id="d1" class="details">
+
+Delivery staff available anywhere in Lucknow.  
+For shops, restaurants, parcels and business delivery.
+
 </div>
 
-<div class="card">
+</div>
+
+<div class="card" onclick="toggle('d2')">
+
 <h3>Business Manpower</h3>
-<p>Workers for shops, warehouses and offices.</p>
+
+<div id="d2" class="details">
+
+Workers for shops, warehouses, offices and temporary staff hiring.
+
 </div>
 
-<div class="card">
+</div>
+
+<div class="card" onclick="toggle('d3')">
+
 <h3>Home Services</h3>
-<p>Multiple services under one umbrella.</p>
+
+<div id="d3" class="details">
+
+Multiple home related services available across Lucknow.
+
+</div>
+
 </div>
 
 </div>
@@ -180,12 +171,33 @@ Umbrella Services
 </section>
 
 <footer>
+
 Umbrella Services | Lucknow
+
 </footer>
 
-<a class="whatsapp" href="https://wa.me/917985659140" target="_blank">
+<a class="whatsapp" href="https://wa.me/917985659140">
+
 Chat on WhatsApp
+
 </a>
 
+<script>
+
+function toggle(id){
+
+var x=document.getElementById(id);
+
+if(x.style.display==="block"){
+x.style.display="none";
+}else{
+x.style.display="block";
+}
+
+}
+
+</script>
+
 </body>
+
 </html>
