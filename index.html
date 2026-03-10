@@ -1,164 +1,191 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Umbrella Services | Event & Manpower Provider</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        .top-bar {
-    background: #000;
-    color: white;
-    text-align: center;
-    padding: 20px;
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Umbrella Services | Lucknow</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, sans-serif;
 }
 
-.hero {
-    position: relative;
-    background: linear-gradient(135deg, #007BFF, #00c6ff);
-    text-align: center;
-    padding: 120px 20px;
-    overflow: hidden;
+body{
+background:#020617;
+color:white;
+overflow-x:hidden;
 }
 
-.hero-logo {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 400px;
-    opacity: 0.12;
-    z-index: 1;
+/* HEADER */
+
+header{
+display:flex;
+justify-content:center;
+align-items:center;
+padding:20px;
+font-size:30px;
+font-weight:bold;
+color:#38bdf8;
 }
 
-.hero-content {
-    position: relative;
-    z-index: 2;
-    color: white;
+/* HERO */
+
+.hero{
+height:90vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
 }
 
-.btn {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 12px 25px;
-    background: white;
-    color: #007BFF;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
+/* LOGO */
+
+.hero img{
+width:420px;
+max-width:90%;
+margin-bottom:20px;
+animation:float 6s ease-in-out infinite;
 }
 
-        section {
-            padding: 40px 20px;
-            text-align: center;
-        }
+/* FLOAT ANIMATION */
 
-        .services {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-        }
+@keyframes float{
 
-        .card {
-            background: white;
-            padding: 20px;
-            width: 260px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        }
+0%{transform:translateY(0px)}
+50%{transform:translateY(-15px)}
+100%{transform:translateY(0px)}
 
-        footer {
-            background: #111;
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
+}
 
-        @media(max-width:768px){
-            .services{
-                flex-direction: column;
-                align-items: center;
-            }
-        }
-    </style>
+.hero h1{
+font-size:44px;
+margin-bottom:10px;
+}
+
+.hero p{
+font-size:22px;
+color:#cbd5f5;
+}
+
+.price{
+margin-top:15px;
+font-size:26px;
+color:#22c55e;
+font-weight:bold;
+}
+
+/* SERVICES */
+
+.services{
+padding:80px 10%;
+text-align:center;
+}
+
+.services h2{
+font-size:34px;
+margin-bottom:40px;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
+
+.card{
+background:#1e293b;
+padding:30px;
+border-radius:10px;
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+/* WHATSAPP BUTTON */
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:15px 22px;
+border-radius:50px;
+font-weight:bold;
+text-decoration:none;
+box-shadow:0 0 10px rgba(0,0,0,0.5);
+}
+
+footer{
+text-align:center;
+padding:20px;
+background:#020617;
+}
+
+</style>
+
 </head>
 
 <body>
 
-<header class="top-bar">
-    <h1>Umbrella Services</h1>
-    <p>All India Event & Hourly Manpower Provider</p>
+<header>
+Umbrella Services
 </header>
 
 <section class="hero">
-    <img src="logo.png" class="hero-logo" alt="Umbrella Services Logo">
 
-    <div class="hero-content">
-        <h2>Professional Event & Manpower Solutions</h2>
-        <p>Available Across Lucknow</p>
-        <a href="tel:7985691940" class="btn">📞 Call Now</a>
-    </div>
-</section>
-    <h2>Event Manpower Services (Priority)</h2>
-    <div class="services">
-        <div class="card">
-            <h3>Wedding Staff</h3>
-            <p>Helpers, Servers, Setup Crew</p>
-            <p><strong>Starting ₹120 / Hour</strong></p>
-        </div>
+<img src="logo.png">
 
-        <div class="card">
-            <h3>Corporate Events</h3>
-            <p>Professional Support Staff</p>
-            <p><strong>Flexible Hourly Rates</strong></p>
-        </div>
+<h1>Umbrella Services</h1>
 
-        <div class="card">
-            <h3>Exhibition & Public Events</h3>
-            <p>Setup, Crowd Handling, Clean-up</p>
-            <p><strong>Custom Pricing</strong></p>
-        </div>
-    </div>
+<p>Across Lucknow</p>
+
+<div class="price">Starting ₹150</div>
+
 </section>
 
-<section>
-    <h2>Hourly Manpower Services</h2>
-    <div class="services">
-        <div class="card">
-            <h3>Housekeeping</h3>
-            <p>Home & Office Cleaning Staff</p>
-        </div>
+<section class="services">
 
-        <div class="card">
-            <h3>Office Helpers</h3>
-            <p>Temporary & Short-Term Staff</p>
-        </div>
+<h2>Our Services</h2>
 
-        <div class="card">
-            <h3>Loading / Unloading</h3>
-            <p>Skilled & Semi-Skilled Workers</p>
-        </div>
-    </div>
-</section>
+<div class="cards">
 
-<section>
-    <h2>Why Choose Umbrella Services?</h2>
-    <p>✔ Verified Workforce</p>
-    <p>✔ Reliable & On-Time Service</p>
-    <p>✔ Competitive Hourly Rates</p>
-    <p>✔ Available Across India</p>
-</section>
+<div class="card">
+<h3>Delivery Staff</h3>
+<p>Delivery boys available across Lucknow.</p>
+</div>
 
-<section>
-    <h2>Contact Us</h2>
-    <p>Call Us Directly For Booking</p>
-    <a href="tel:7985691940" class="btn">📞 7985691940</a>
+<div class="card">
+<h3>Business Manpower</h3>
+<p>Workers for shops, warehouses and offices.</p>
+</div>
+
+<div class="card">
+<h3>Home Services</h3>
+<p>Multiple services under one umbrella.</p>
+</div>
+
+</div>
+
 </section>
 
 <footer>
-    © 2026 Umbrella Services | All Rights Reserved
+Umbrella Services | Lucknow
 </footer>
 
+<a class="whatsapp" href="https://wa.me/917985659140" target="_blank">
+Chat on WhatsApp
+</a>
+
 </body>
-</html> 
+</html>
